@@ -7,7 +7,7 @@ import { ChainId } from "@0x/contract-addresses";
 
 export const getSwapQuote = (swapQuoteParams: QuoteParams, chainId: ChainId) => {
 
-    const queryString = qs.stringify({ ...swapQuoteParams, feeRecipient: '0xa4B2815B66ca21B681d2e1C25a9A54ced751A2e3', affiliateAddress: '0xa4B2815B66ca21B681d2e1C25a9A54ced751A2e3' });
+    const queryString = qs.stringify({ ...swapQuoteParams, feeRecipient: '0x5bd68b4d6f90bcc9f3a9456791c0db5a43df676d', affiliateAddress: '0x5bd68b4d6f90bcc9f3a9456791c0db5a43df676d' });
 
     return axios.get(`${ZERO_EX_QUOTE_ENDPOINT(chainId)}?${queryString}`);
 
